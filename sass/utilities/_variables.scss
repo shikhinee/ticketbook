@@ -4,7 +4,16 @@ $navbar-height: 7rem;
 // TYPOGRAPHY VALUES
 $font-sans: "Inter", sans-serif;
 $font-mono: "Inconsolata", monospace;
+$font-three: "Busorama-ITC-Std", sans-serif;
 
+@mixin padding-x($y: 0) {
+  box-sizing: border-box;
+  padding: $y 3.2rem;
+}
+@font-face {
+  font-family: "Busorama-ITC-Std";
+  src: url("/Busorama-ITC-Std-Medium.otf") format("opentype");
+}
 // BREAKPOINTS
 $breakpoints: (
   xs: 30em,
@@ -19,7 +28,7 @@ $breakpoints: (
 
 // COLORS
 // DARK MODE COLORS
-$clr-primary-dark: #03c4a1;
+$clr-primary-dark: #d29a6b;
 $clr-secondary-dark: #f69765;
 
 // MIDDLE COLORS

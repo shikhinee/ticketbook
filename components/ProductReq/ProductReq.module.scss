@@ -1,0 +1,100 @@
+@import "global";
+
+.container {
+  box-sizing: border-box;
+  padding: 1.5em 2em;
+  width: 90%;
+  max-width: 75rem;
+  height: auto;
+  border-radius: 2rem;
+  background-color: #fff;
+  box-shadow: rgba(149, 157, 165, 0.15) 0px 8px 24px;
+  display: flex;
+  @include respondMax(md) {
+    overflow-x: scroll;
+  }
+  margin: 1em 0;
+  z-index: 1;
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 32rem;
+    justify-content: center;
+    label {
+      font-weight: 400;
+      margin-bottom: 1em;
+    }
+    input {
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 32rem;
+      min-width: 23rem;
+      padding: 0.5em 2rem;
+      border-radius: 0.8rem;
+      border: none;
+      color: #888888;
+      background-color: #d3d3d3;
+      line-height: 1.5em;
+      margin-bottom: 1em;
+      box-shadow: rgba(149, 157, 165, 0.15) 0px 8px 24px;
+    }
+    button {
+      width: 100%;
+      max-width: 32rem;
+      min-width: 23rem;
+      background: $clr-primary-dark;
+      border-radius: 1rem;
+      padding: 1em 0;
+      color: $clr-neutral-8;
+      margin-top: 1em;
+    }
+  }
+}
+.information {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  @include respondMax(md) {
+    flex-direction: column;
+  }
+}
+.guide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2em 0;
+  margin-right: 2em;
+  h3 {
+    color: $clr-primary-dark;
+    margin-bottom: 0.5em;
+  }
+  p {
+    max-width: 32rem;
+    &:not(:last-of-type) {
+      margin-bottom: 1em;
+    }
+  }
+  @include respondMax(md) {
+    margin-right: 0;
+  }
+}
+.bankInfo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: rgba(149, 157, 165, 0.15) 0px 8px 24px;
+  border-radius: 1rem;
+  margin-bottom: 1em;
+  max-width: 50rem;
+  padding: 0.5em 1em;
+  @include respondMax(xs) {
+    flex-direction: column;
+  }
+}
+.bank {
+  padding: 1em 0;
+  margin-right: 2em;
+}

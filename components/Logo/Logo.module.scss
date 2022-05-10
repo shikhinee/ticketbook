@@ -1,12 +1,22 @@
 @import "global";
 
 .container {
-  display: flex;
   align-items: center;
   justify-content: center;
-
+  height: 100%;
+  width: 100%;
   // Default logo size
   font-size: 1.6rem;
+  position: relative;
+  padding: 2rem;
+  box-sizing: border-box;
+  @include respondMax(sm){
+    min-height: 12rem;
+    min-width: 12rem;
+    padding: 2rem;
+  }
+
+
 }
 
 .bar {
@@ -16,7 +26,6 @@
   @include themify() {
     background-color: has(clr-primary);
   }
-  margin-right: 0.5em;
 }
 
 .title {

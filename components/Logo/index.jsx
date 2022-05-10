@@ -7,7 +7,7 @@ import styles from "./Logo.module.scss";
 const Logo = ({ size, ...props }) => {
   return (
     <div className={styles.container} style={{ fontSize: size }}>
-      <Image src="/logo.svg" layout="fill" alt="logo"></Image>
+      <Image src="/logo.svg" layout="responsive" height={250} width={250} alt="logo"/>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 //Next, React (core node_modules) imports must be placed here
 import { useEffect, useRef } from "react";
-
+import Image from "next/image";
 //import STORE from '@/store'
 
 //import COMPONENT from '@/components'
@@ -25,16 +25,19 @@ const Navbar = (props) => {
 
   return (
     <header ref={ref} className={styles.container}>
+      <div className={styles.coverImg}>
+        <Image layout="fill" objectFit="cover" src="/cover.svg" alt="cover"></Image>
+      </div>
       <nav className={styles.innerContainer}>
-        <Link href="/">
-          <Logo size={32} />
+        <Link className={styles.logoContainer} href="/">
+          <Logo size={10} />
         </Link>
-
-        <ul className={styles.menu}>
-          <li className={styles.menuItem}>
-          </li>
-        </ul>
       </nav>
+      <div className={styles.frame}>
+        <div className={styles.frameContainer}>
+          <Image layout="responsive" width={1920} height={200} src="/frame.svg" />
+        </div>
+      </div>
     </header>
   );
 };

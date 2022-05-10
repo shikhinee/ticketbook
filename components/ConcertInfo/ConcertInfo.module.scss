@@ -1,0 +1,40 @@
+@import 'global';
+
+.container {
+    height: 60rem;
+    width: 100%;
+    max-width: 63rem;
+    padding: 6rem 3rem;
+    box-sizing: border-box;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    font-family: $font-three;
+    color: #000;
+}
+.ariunaa {
+    font-size: 3.6rem;
+}
+.live {
+    font-size: 3.6rem;
+    margin-bottom: 6rem;
+}
+.white {
+    font-size: 9.6rem;
+    margin-bottom: 3rem;
+}
+.location {
+    font-size: 3.825rem;
+    margin-bottom: 6rem;
+}
+.menu {
+    font-size: 3.2rem;
+    margin-bottom: 3rem;
+}
+.food {
+    font-size: 1.8rem;
+    &:not(:last-of-type) {
+        margin-bottom: 1.5rem;
+    }
+}

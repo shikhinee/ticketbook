@@ -5,10 +5,7 @@ import scrollTo from "@/utils/functions/scrollTo";
 
 import DefaultLayout from "@/layouts/Default";
 
-import ExampleLanding from "@/views/Root/ExampleLanding";
-import ExampleTypography from "@/views/Root/ExampleTypography";
-import ExampleTechnologies from "@/views/Root/ExampleTechnologies";
-
+import Main from "@/views/Root/Main";
 import styles from "./Root.module.scss";
 
 const RootPage = (props) => {
@@ -28,7 +25,7 @@ const RootPage = (props) => {
       </Head>
 
       <main className={styles.container}>
-<div className={styles.nav}></div>
+        <Main />
       </main>
     </Fragment>
   );
