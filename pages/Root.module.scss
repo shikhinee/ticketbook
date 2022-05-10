@@ -1,13 +1,15 @@
 @import "global";
 
 .container {
+  @include padding-x();
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100%;
-  margin-top: 10%;
+  margin-top: 20%;
   background-color: #fff;
   @include respondMax(lg){
-    margin: 15%;
+    margin-top: 30%;
+    flex-wrap: wrap;
   }
 }

@@ -1,20 +1,17 @@
 import Head from "next/head";
-import { useRef, Fragment } from "react";
-
+import { useEffect, useState, useRef, Fragment } from "react";
+import { useRouter } from "next/router";
+import Notification from "@/components/Notification";
 import scrollTo from "@/utils/functions/scrollTo";
 
 import DefaultLayout from "@/layouts/Default";
 
-import Main from "@/views/Root/Main";
+import ProductReq from '@/components/ProductReq';
+import ConcertCard from '@/components/ConcertCard';
+import ConcertInfo from '@/components/ConcertInfo';
 import styles from "./Root.module.scss";
 
-const RootPage = (props) => {
-  const ref = useRef(null);
-
-  const handleClick = () => {
-    // 2 times Navbar Height
-    scrollTo(ref, 140);
-  };
+const RootPage = ({firstName, lastName, email, phoneNumber, location, ...props}) => {
 
   return (
     <Fragment>
@@ -25,7 +22,9 @@ const RootPage = (props) => {
       </Head>
 
       <main className={styles.container}>
-        <Main />
+      <ConcertCard />
+			 <ConcertInfo />
+			<ProductReq/>
       </main>
     </Fragment>
   );

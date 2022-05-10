@@ -57,9 +57,6 @@ const LoginPage = ({ csrfToken }) => {
   return (
     <main className={styles.container}>
       <Notification message={notification.message} success={notification.success} />
-      <div className={styles.star}>
-        <Image width={150} height={250} src="/star.png" layout="fixed" className={styles.star} alt="star" priority />
-      </div>
       <form className={styles.form} action="/api/auth/callback/credentials" method="post">
         <input name="csrfToken" type="hidden" defaultValue={csrfToken} />
         <div className={styles.imageContainer}>

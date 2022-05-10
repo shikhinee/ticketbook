@@ -10,7 +10,7 @@ import { MoneyOff } from "@styled-icons/material/MoneyOff";
 //import STORE from '@/store'
 
 //import LAYOUT from '@/layouts'
-import DefaultLayout from "@/layouts/Default";
+import DashboardLayout from "@/layouts/Dashboard";
 //import VIEWS from '@/views'
 
 //import useFETCHER from '@/tools'
@@ -55,9 +55,10 @@ const ProductRequestPage = (props) => {
         // Reverse the array so the newest request is first
         setProductRequests(data.data.reverse());
         setIsFetched(true);
+        console.log(data);
       })
       .catch((err) => {
-        console.log("/dashboard/products/request fetch aborted", err);
+        console.log("/dashboard fetch aborted", err);
       });
 
     return () => controller.abort();
@@ -193,47 +194,6 @@ const ProductRequestPage = (props) => {
                       </button>
                     </div>
                   </div>
-
-                  <div className={styles.tableRowProduct}>
-                    <div className={styles.productNetPrice}>
-                      <span>Нийт үнэ:</span>
-                      <span>
-                        {request.productInfo.reduce((acc, product) => {
-                          return acc + product.productPrice * product.quantity;
-                        }, 0)}
-                        ₮
-                      </span>
-                    </div>
-                    {request.productInfo.map((product) => {
-                      return (
-                        <div
-                          className={styles.productInfoContainer}
-                          key={product._id}
-                        >
-                          <div className={styles.productInfo}>
-                            <span>Нэр:</span>
-                            <span>{product.productName}</span>
-                          </div>
-                          <div className={styles.productInfo}>
-                            <span>Төрөл:</span>
-                            <span>{product.type}</span>
-                          </div>
-                          <div className={styles.productInfo}>
-                            <span>Өнгө:</span>
-                            <span>{product.color}</span>
-                          </div>
-                          <div className={styles.productInfo}>
-                            <span>Тоо:</span>
-                            <span>{product.quantity}</span>
-                          </div>
-                          <div className={styles.productInfo}>
-                            <span>Үнэ:</span>
-                            <span>{product.productPrice}₮</span>
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
                 </div>
               );
             })}
@@ -243,6 +203,6 @@ const ProductRequestPage = (props) => {
   );
 };
 
-ProductRequestPage.Layout = DefaultLayout;
+ProductRequestPage.Layout = DashboardLayout;
 
 export default ProductRequestPage;
