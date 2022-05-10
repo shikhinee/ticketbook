@@ -31,7 +31,6 @@ const LoginPage = ({ csrfToken }) => {
     message: '',
     success: false,
   });
-
   useEffect(() => {
     if (!notification.message) return;
 

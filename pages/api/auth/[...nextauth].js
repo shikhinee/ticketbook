@@ -44,13 +44,13 @@ export default NextAuth({
         if (!isValid) {
           throw new Error("wrongPassword");
         }
-
         return user;
       },
     }),
   ],
   callbacks: {
     async redirect({ url, baseUrl }) {
+
       return baseUrl;
     },
 

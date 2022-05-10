@@ -9,20 +9,12 @@ const requestModHandler = async (req, res) => {
   const { method } = req;
   const session = await getSession({ req })
 
-  console.log(session)
   switch (method) {
     case "GET":
-      try {
-        if (session.user.isAdmin) {
-          
-          const productRequests = await productReq.find({}).lean();
-
-          const data = await productRequests.find({})
+      try {       
+          const data = await productReq.find({})
+          console.log(data)
           res.status(200).json({ success: true, data: data })
-        } else {
-          return res.status(401).json({ success: false, msg: "You dont have a access" });
-        }
-
 
       } catch (error) {
         console.log(error);

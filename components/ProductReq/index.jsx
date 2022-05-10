@@ -149,7 +149,7 @@ const ProductReq = ({
             onChange={handleChange}
             required
           />
-          <button type="submit" onClick={handleSubmit}>
+          <button type="submit">
             Тасалбар захиалах
           </button>
         </form>

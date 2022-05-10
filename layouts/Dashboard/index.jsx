@@ -14,15 +14,14 @@ import styles from "./Dashboard.module.scss";
 const DashboardLayout = ({ children, ...props }) => {
   const { data: session, status } = useSession();
   const router = useRouter();
-
   if (status === "loading") {
     return null;
   }
-
-  if (!session || !session.user.isAdmin) {
-    router.push("/auth/login");
-    return null;
-  }
+console.log(session);
+  // if (!session || !session.user.isAdmin) {
+  //   router.push("/auth/login");
+  //   return null;
+  // }
 
   return (
     <div className={styles.container}>

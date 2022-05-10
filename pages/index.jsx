@@ -12,7 +12,6 @@ import ConcertInfo from '@/components/ConcertInfo';
 import styles from "./Root.module.scss";
 
 const RootPage = ({firstName, lastName, email, phoneNumber, location, ...props}) => {
-
   return (
     <Fragment>
       <Head>

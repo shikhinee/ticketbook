@@ -48,14 +48,13 @@ const ProductRequestPage = (props) => {
 
   useEffect(() => {
     const controller = new AbortController();
-
+    const signal = controller.signal;
     axios
-      .get("/api/productReq", { signal: controller.signal })
+      .get("/api/productReq", { signal: signal })
       .then(({ data }) => {
         // Reverse the array so the newest request is first
         setProductRequests(data.data.reverse());
         setIsFetched(true);
-        console.log(data);
       })
       .catch((err) => {
         console.log("/dashboard fetch aborted", err);
@@ -83,7 +82,7 @@ const ProductRequestPage = (props) => {
   };
 
   if (status === "loading") return null;
-  if (!session || !session.user.isAdmin) return null;
+  // if (!session || !session.user.isAdmin) return null;
 
   const toggleStatus = (e) => {
     productRequests.map((productRequest) => {
@@ -123,11 +122,12 @@ const ProductRequestPage = (props) => {
           <div className={`${styles.tableHeadCol} ${styles.tableEmail}`}>
             Цахим шуудан
           </div>
-
+          <div className={`${styles.tableHeadCol} ${styles.tableLocation}`}>
+            Гэрийн хаяг
+          </div>
           <div className={`${styles.tableHeadCol} ${styles.tableTel}`}>
             Утасны Дугаар
           </div>
-
           <div
             onClick={sortByStatus}
             className={`${styles.tableHeadCol} ${styles.tableStatus} ${styles.filter}`}
@@ -167,6 +167,11 @@ const ProductRequestPage = (props) => {
                       className={`${styles.tableBodyCol} ${styles.tableEmail}`}
                     >
                       {request.email}
+                    </div>
+                    <div
+                      className={`${styles.tableBodyCol} ${styles.tableLocation}`}
+                    >
+                      {request.location}
                     </div>
                     <div
                       className={`${styles.tableBodyCol} ${styles.tableTel}`}
