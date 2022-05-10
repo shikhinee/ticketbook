@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-
+import { SessionProvider } from "next-auth/react";
 // import { Provider } from "next-auth/client";
 
 import ThemeLayout from "@/layouts/Theme";
@@ -11,7 +11,7 @@ import "@/sass/app.scss";
 const App = ({ Component, pageProps: { session, ...pageProps } }) => {
   const Layout = Component.Layout ? Component.Layout : Fragment;
   return (
-    // <Provider session={session}>
+    <SessionProvider session={session}>
     <ThemeContextProvider>
       <ThemeLayout>
         {
@@ -21,7 +21,7 @@ const App = ({ Component, pageProps: { session, ...pageProps } }) => {
         }
       </ThemeLayout>
     </ThemeContextProvider>
-    // </Provider>
+    </SessionProvider>
   );
 };
 

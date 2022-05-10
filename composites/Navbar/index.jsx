@@ -27,18 +27,11 @@ const Navbar = (props) => {
     <header ref={ref} className={styles.container}>
       <nav className={styles.innerContainer}>
         <Link href="/">
-          <Logo size={16} />
+          <Logo size={32} />
         </Link>
 
         <ul className={styles.menu}>
           <li className={styles.menuItem}>
-            <Link
-              className={styles.menuLink}
-              activeClassName={styles.menuLink__active}
-              href="/design-system"
-            >
-              Design System
-            </Link>
           </li>
         </ul>
       </nav>

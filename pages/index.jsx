@@ -23,14 +23,12 @@ const RootPage = (props) => {
     <Fragment>
       <Head>
         {/* TITLE */}
-        <title>Solid Project 2.0</title>
-        <meta property="og:title" content="Solid Project 2.0" key="title" />
+        <title>ZTerra</title>
+        <meta property="og:title" content="ZTerra" key="title" />
       </Head>
 
       <main className={styles.container}>
-        <ExampleLanding onClick={handleClick} themeInverse />
-        <ExampleTypography ref={ref} />
-        <ExampleTechnologies />
+<div className={styles.nav}></div>
       </main>
     </Fragment>
   );

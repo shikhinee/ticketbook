@@ -1,0 +1,91 @@
+@import 'global';
+
+.container {
+    margin-top: 14rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.form {
+    width: 90%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 50rem;
+    height: auto;
+    border-radius: 2rem;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+}
+.imageContainer {
+    position: relative;
+    height: 13.5rem;
+}
+.image {
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    border-radius: 2rem 2rem 0 0;
+}
+.details {
+    height: 40rem;
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    background-color: $clr-neutral-8;
+    input {
+        padding: 1em;
+        border-radius: 0.2em;
+        border: 0.1em solid $clr-neutral-7;
+        margin-bottom: 1em;
+    };
+    label {
+        margin-bottom: 0.5em;
+    }
+    button {
+        background-color: $clr-primary-dark;
+        padding: 1em 2em;
+        color: $clr-neutral-8;
+        border-radius: 0.5em;
+        margin: 1.5em 0em;
+        transition: 0.3s;
+        &:hover {
+            color: $clr-primary-dark;
+            background-color: $clr-neutral-8;
+            box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+        }
+    }
+    a {
+        background-color: $clr-neutral-8;
+        padding: 0.8em 2em;
+        color: $clr-neutral-1;
+        border-radius: 0.5em;
+        text-decoration: none;
+        border: 0.1em solid $clr-neutral-1;
+        text-align: center;
+        font-size: 0.8em;
+        transition: 0.3s;
+        &:hover {
+            background-color: $clr-neutral-1;
+            color: $clr-neutral-8;
+        }
+    }
+    @include respondMax(xs){
+        padding: 1.5em;
+    }
+}
+.remember {
+    input {
+        margin: 0;
+    }
+    label {
+        margin-left: 0.5em;
+        font-size: 0.9em;;
+    }
+}
+.star {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+}
