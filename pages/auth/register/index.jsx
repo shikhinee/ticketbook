@@ -7,7 +7,7 @@ import axios from "axios";
 //import STORE from '@/store'
 
 //import LAYOUT from '@/layouts'
-import DefaultLayout from "@/layouts/Default";
+import ComponentShowcaseLayout from "@/layouts/ComponentShowcase";
 //import VIEWS from '@/views'
 
 //import useFETCHER from '@/tools'
@@ -46,17 +46,6 @@ const RegisterPage = (props) => {
 
   return (
     <main className={styles.container}>
-      <div className={styles.star}>
-        <Image
-          width={150}
-          height={250}
-          src="/star.png"
-          layout="fixed"
-          className={styles.star}
-          alt="star"
-          priority
-        />
-      </div>
       <form className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.imageContainer}>
         </div>
@@ -98,5 +87,5 @@ const RegisterPage = (props) => {
   );
 };
 
-RegisterPage.Layout = DefaultLayout;
+RegisterPage.Layout = ComponentShowcaseLayout;
 export default RegisterPage;

@@ -7,7 +7,7 @@ import { useRouter } from 'next/router';
 //import STORE from '@/store'
 
 //import LAYOUT from '@/layouts'
-import DefaultLayout from '@/layouts/Default';
+import ComponentShowcaseLayout from '@/layouts/ComponentShowcase';
 import Notification from '@/components/Notification';
 //import VIEWS from '@/views'
 
@@ -60,7 +60,7 @@ const LoginPage = ({ csrfToken }) => {
       <form className={styles.form} action="/api/auth/callback/credentials" method="post">
         <input name="csrfToken" type="hidden" defaultValue={csrfToken} />
         <div className={styles.imageContainer}>
-          <Image className={styles.image} src="/signinbg.png" layout="fill" alt="Login" priority />
+          <Image className={styles.image} src="/cover.svg" layout="fill" alt="Login" priority />
         </div>
         <div className={styles.details}>
           <label htmlFor="email">Цахим шуудан</label>
@@ -92,5 +92,5 @@ export async function getServerSideProps(ctx) {
   };
 }
 
-LoginPage.Layout = DefaultLayout;
+LoginPage.Layout = ComponentShowcaseLayout;
 export default LoginPage;

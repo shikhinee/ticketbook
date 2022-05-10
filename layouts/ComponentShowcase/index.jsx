@@ -15,7 +15,6 @@ import styles from "./ComponentShowcase.module.scss";
 const ComponentShowcaseLayout = ({ children, ...props }) => {
   return (
     <div className={styles.container}>
-      <Navbar />
       {children}
     </div>
   );
