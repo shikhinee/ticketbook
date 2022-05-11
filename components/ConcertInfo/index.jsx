@@ -16,7 +16,7 @@ const ConcertInfo = (props) => {
 				<span className={styles.food}>LOCAL BEEF STEAK WITH POTATO, GRILLED ASPARAGUS AND MUSHROOM SAUCE</span>
 				<span className={styles.food}>GREEN GARDEN SALAD | BLUEBERRY MOUSSE CAKE | GLASS OF RED WINE</span>
 				<span className={styles.food}>MINERAL WATER</span>
-
+				<span className={styles.food}>TICKET PRICE - 300’000MNT</span>
 			</div>
 		</div>
 	)
