@@ -51,9 +51,6 @@ const SuccessPage = (props) => {
             баталгаажихыг анхаарна уу!
           </p>
         </div>
-        <p>
-          <span>Таны хүсэлт амжилттай илгээгдлээ!</span>
-        </p>
         <Link href="/">Нүүр хуудас руу буцах</Link>
       </div>
     </motion.main>
