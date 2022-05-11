@@ -45,6 +45,7 @@ const ProductReq = ({
     return () => clearTimeout(timer);
   }, [notification]);
   const handleSubmit = (e) => {
+    e.preventDefault();
     const productReq = {
       firstName: form.firstName,
       lastName: form.lastName,
@@ -57,7 +58,7 @@ const ProductReq = ({
       .post("/api/productReq", productReq)
       .then((res) => {
         if (res.status === 201) {
-          router.push("/success");
+          router.push("/successful");
         }
       })
       .catch((err) => {
@@ -83,27 +84,8 @@ const ProductReq = ({
         success={notification.success}
       />
       <div className={styles.information}>
-        <div className={styles.guide}>
-          <h3>Төлбөр төлөх заавар</h3>
-          <p>Та дараах данс руу төлбөрөө шилжүүлнэ үү.</p>
-          <p>Тасалбарын үнэ: 300’000 ₮</p>
-          <div className={styles.bankInfo}>
-            <div className={styles.bank}>
-              <p>Данс: 50xxxxxxxx</p>
-              <p>Банк: Хаан Банк</p>
-              <p>Нэр: Бат-Оргил</p>
-            </div>
-          </div>
-          <p>Утасны дугаар: 99117034, 99116934</p>
-          <p>
-            Гүйлгээний утган дээр та өөрийн нэр болон утасны дугаараа бичээрэй
-          </p>
-          <p>
-            <b>Санамж:</b> Төлбөрөө бүрэн шилжүүлсэн тохиолдолд таны захиалга
-            баталгаажихыг анхаарна уу!
-          </p>
-        </div>
         <form onSubmit={handleSubmit}>
+        <h3>Захиалга</h3>
           <label htmlFor="lastName">Овог</label>
           <input
             type="text"
@@ -140,10 +122,10 @@ const ProductReq = ({
             onChange={handleChange}
             required
           />
-          <label htmlFor="location">Гэрийн хаяг</label>
+          <label htmlFor="location">Хүргүүлэх хаяг</label>
           <input
             type="text"
-            placeholder="Гэрийн хаяг"
+            placeholder="Хүргүүлэх хаяг"
             name="location"
             id="location"
             onChange={handleChange}

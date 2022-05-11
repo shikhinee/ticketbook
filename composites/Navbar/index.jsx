@@ -12,16 +12,6 @@ import styles from "./Navbar.module.scss";
 const Navbar = (props) => {
   const ref = useRef(null);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const isTop = window.scrollY < window.innerHeight;
-      ref.current.classList.toggle(styles.defaultBackground, !isTop);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <header ref={ref} className={styles.container}>
