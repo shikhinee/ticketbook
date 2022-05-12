@@ -18,10 +18,10 @@ const DashboardLayout = ({ children, ...props }) => {
     return null;
   }
 console.log(session);
-  // if (!session || !session.user.isAdmin) {
-  //   router.push("/auth/login");
-  //   return null;
-  // }
+  if (!session || !session.user.isAdmin) {
+    router.push("/auth/login");
+    return null;
+  }
 
   return (
     <div className={styles.container}>

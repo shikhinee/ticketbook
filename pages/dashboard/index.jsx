@@ -82,7 +82,7 @@ const ProductRequestPage = (props) => {
   };
 
   if (status === "loading") return null;
-  // if (!session || !session.user.isAdmin) return null;
+  if (!session || !session.user.isAdmin) return null;
 
   const toggleStatus = (e) => {
     productRequests.map((productRequest) => {
