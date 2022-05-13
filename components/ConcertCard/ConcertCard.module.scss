@@ -10,6 +10,10 @@
     align-items: center;
     box-sizing: border-box;
     padding: 2rem;
+    @include respondMax(xs){
+        min-width: 32rem;
+        margin-top: 2.5rem;
+    }
 }
 .content {
     box-sizing: border-box;
@@ -44,9 +48,15 @@
     margin: 6rem 0;
     width: 100%;
     text-align: center;
+    @include respondMax(xs){
+        font-size: 2.4rem;
+    }
 }
 .location {
     font-size: 1.8rem;
     width: 100%;
     text-align: center;
+    @include respondMax(xs){
+        font-size: 1.6rem;
+    }
 }

@@ -16,18 +16,18 @@ const Navbar = (props) => {
   return (
     <header ref={ref} className={styles.container}>
       <div className={styles.coverImg}>
-        <Image layout="fill" objectFit="cover" src="/cover.svg" alt="cover"></Image>
+
       </div>
       <nav className={styles.innerContainer}>
         <Link className={styles.logoContainer} href="/">
           <Logo size={10} />
         </Link>
       </nav>
-      <div className={styles.frame}>
+      {/* <div className={styles.frame}>
         <div className={styles.frameContainer}>
           <Image layout="responsive" width={1920} height={200} src="/frame.svg" />
         </div>
-      </div>
+      </div> */}
     </header>
   );
 };
