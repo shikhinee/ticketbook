@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 //import STORE from '@/store'
 
 //import LAYOUT from '@/layouts'
-import DashboardLayout from "@/layouts/Dashboard";
+import ComponentShowcaseLayout from "@/layouts/ComponentShowcase";
 //import VIEWS from '@/views'
 
 //import useFETCHER from '@/tools'
@@ -56,5 +56,5 @@ const SuccessPage = (props) => {
     </motion.main>
   );
 };
-SuccessPage.Layout = DashboardLayout;
+SuccessPage.Layout = ComponentShowcaseLayout;
 export default SuccessPage;
